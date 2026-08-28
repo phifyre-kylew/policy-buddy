@@ -1,0 +1,13 @@
+# Verified against these major versions in August 2026.
+# Floors are set at the current major so a fresh install matches what the
+# guide describes. If you are reading this much later, check for major
+# version bumps before assuming the code samples still apply -
+# chromadb went 0.5.x -> 1.x, and sentence-transformers 3.x -> 6.x,
+# during the life of this project.
+
+python-docx>=1.2.0
+sentence-transformers>=6.0.0
+chromadb>=1.5.0
+pytest>=8.0.0
+pyyaml>=6.0
+mcp>=2.0.0

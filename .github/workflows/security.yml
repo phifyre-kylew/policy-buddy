@@ -1,0 +1,19 @@
+name: Injection suite
+
+# Added at Stage 5. Once wired up, a change that weakens the agent's
+# defences fails the build.
+
+on: [push, pull_request]
+
+jobs:
+  injection:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pytest pyyaml
+      - name: Validate attack suite is well formed
+        run: python tests/injection/validate_cases.py
