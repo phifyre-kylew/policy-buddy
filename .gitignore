@@ -6,8 +6,7 @@ local.settings.json
 
 # Data
 vectordb/
-corpus/*.docx
-corpus/*.pdf
+corpus/
 
 # Python
 __pycache__/
